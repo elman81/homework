@@ -1,0 +1,392 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+*,*:before,*:after{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:focus,:active {outline: none;}
+a:focus,a:active {outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family: inherit;}
+input::-ms-clear{display:none}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding: 0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: text-bottom;}
+h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
+/* --------------------------------------------------------------------------------------------------------- */
+/* --------------------------------------- RESET  IS END ----------------------------------------------------*/
+/* --------------------------------------------------------------------------------------------------------- */
+.wrapper{
+    width: 100%;
+    height: 100%;
+}
+.container{
+    width: 576px;
+    height: 100vh;
+    border: 1px solid #000;
+    margin: 0 auto;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+.header_content{
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    border: 1px solid #000;
+    background: url('../img/nasa.png') center center/cover;
+    
+}
+.header_content .header_logo{
+    width: 70px;
+    margin: 5px 15px 0px;
+}
+.header_content .header_logo p{
+    color: #fff;
+    font-weight: 700;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+.header_content .header_menu{
+    display: none;
+}
+.header_content .header_burger_menu{
+    padding: 0px 25px 0px 0px;
+    width: 300px;
+    position: relative;
+    text-align: center;
+    color: #fff;
+    height: 40px;
+}
+#check-menu{
+    display: none;
+}
+label{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    cursor: pointer;
+    line-height: 40px;
+}
+.burger-line{
+    position: absolute;
+    width: 35px;
+    height: 2px;
+    background-color: #fff;
+    right: 10px;
+    top: 8px;
+    transition: .5s all;
+}
+.second, .third{
+    top: 18px;
+}
+.fourth{
+    top: 28px;
+}
+.main-menu{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transform: translateY(100%);
+    max-height: 0;
+    font-size: 0;
+    overflow: hidden;
+    transition: .5s all;
+    
+}
+a{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+    border-top: 1px solid rgba(255, 255, 255, .3);
+}
+#check-menu:checked ~.main-menu{
+    max-height: 500px;
+    font-size: 16px;
+}
+a:hover{
+    color: #d9ff00;
+}
+#check-menu:checked ~ .first{
+    display: none;
+}
+#check-menu:checked ~ .second{
+    transform: rotate(45deg);
+}
+#check-menu:checked ~ .third{
+    transform: rotate(-45deg);
+}
+#check-menu:checked ~ .fourth{
+    display: none;
+}
+/* --------------------------------------------------- */
+/* --------------- Burger menu style  END -----------*/
+/* --------------------------------------------------- */
+.section {
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../img/nasa.png') center center/cover;
+}
+.section .section_text{
+    display: block;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(104, 99, 99);
+}
+main .main_block_1{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px 0px;
+    margin-bottom: 20px;
+   
+}
+main .main_block_1 p{
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+}
+/* -------------- Main Block2 START-------------*/
+main .main_block_2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(122, 117, 117);
+    border-radius: 3px;
+}
+main .main_block_2 .main_block2_img{
+    width: 50%;
+    height: 100%;
+    display: block;
+}
+.main_block2_img .block2_img img{
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center ;
+    background-size: cover;
+}
+main .block2_data_block{
+    display: block;
+    width: 40%;
+    height: 100%;
+}
+main .block2_data_block .block2_data{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    
+}
+main .block2_data_block .block2_data_text{
+    width: 100%;
+    height: 50%;
+}
+main .block2_data_block .block2_data_text p{
+    width: 100%;
+    height: auto;
+    color: #fff;
+    font-size: 50px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+main {
+    color: #ff0000;
+    font-size: 30px;
+}
+main .block2_data_block .block2_data_link{
+    display: flex;
+    margin: 0 auto;
+    margin-top: 10%;
+    border: 2px solid #afeb41;
+    background-color: #afeb41;
+    border-radius: 10px;
+}
+/* ------------ Main Block 2 END -------------*/
+/* ------------ Main Block 3  START-------------*/
+main .main_block_3{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(122, 117, 117);
+    border-radius: 3px;
+   
+}
+main .main_block_3 .main_block3_img{
+    width: 50%;
+    height: 100%;
+    display: block;
+}
+.main_block3_img .block3_img img{
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center ;
+    background-size: cover;
+}
+main .block3_data_block{
+    display: block;
+    width: 40%;
+    height: 100%;
+    
+}
+main .block3_data_block .block3_data{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    
+}
+main .block3_data_block .block3_data_text{
+    width: 100%;
+    height: 50%;
+}
+main .block3_data_block .block3_data_text p{
+    width: 100%;
+    height: auto;
+    color: #fff;
+    font-size: 50px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+main {
+    color: #ff0000;
+    font-size: 30px;
+}
+main .block3_data_block .block3_data_link{
+    display: flex;
+    margin: 0 auto;
+    margin-top: 10%;
+    border: 2px solid #afeb41;
+    background-color: #afeb41;
+    border-radius: 10px;
+}
+/* ------------ Main Block 3 END -------------*/
+/* ------------ Main Block 4 -------------*/
+main .main_block_4{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(122, 117, 117);
+    border-radius: 3px;
+    padding-top: 5px;
+    
+}
+main .main_block_4 .main_block4_img{
+    width: 50%;
+    height: 100%;
+    display: block;
+}
+.main_block4_img .block4_img img{
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center ;
+    background-size: cover;
+}
+main .block4_data_block{
+    display: block;
+    width: 40%;
+    height: 100%;
+    
+}
+main .block4_data_block .block4_data{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    
+}
+main .block4_data_block .block4_data_text{
+    width: 100%;
+    height: 50%;
+}
+main .block4_data_block .block4_data_text p{
+    width: 100%;
+    height: auto;
+    color: #fff;
+    font-size: 50px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+main {
+    color: #ff0000;
+    font-size: 30px;
+}
+main .block4_data_block .block4_data_link{
+    display: flex;
+    margin: 0 auto;
+    margin-top: 10%;
+    border: 2px solid #afeb41;
+    background-color: #afeb41;
+    border-radius: 10px;
+}
+/* ------------ Main Block 4 END -------------*/
+@media screen and (min-width: 768px){
+    *{
+        width: 768px;
+    }
+    .header_content .header_menu{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .header_content .header_menu ul{
+        display: inline-block;
+        float: left;
+    }
+    .header_content .header_menu ul li{
+        display: inline-block;
+        float: left;
+    }
+    .header_content .header_menu ul li a{
+        
+        float: left;
+    }
+    .header_content .header_burger_menu{
+        display: none;
+    }
+
+}
